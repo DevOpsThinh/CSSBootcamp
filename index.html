@@ -1,268 +1,31 @@
+<!-- HTML - CSS - SASS - JS Revision
+Author: Nguyen Truong Thinh
+Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Bootcamp</title>
-    <link rel="styleSheet" href="style.css" />
+    <title>Modern Front-end Web Development</title>
+        <link rel="styleSheet" href="/assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,300;1,500;1,700;1,800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      h1,
-      h3 {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      /***                    CSS Selectors            ***/
-      ul {
-        font-size: 32px;
-        list-style: none;
-      }
-
-      ul li {
-        color: blue;
-      }
-
-      /* .item_1 {
-            color: rgb(194, 1, 1);
-        } */
-
-      #list-item {
-        color: #000;
-      }
-
-      input[type="email"] {
-        background-color: orange;
-      }
-
-      .container {
-        width: 800px;
-        background-color: #ddd;
-        margin: 40px auto;
-      }
-
-      .item {
-        padding: 30px;
-        font-size: 30px;
-        color: #fff;
-      }
-
-      .item-1 {
-        background-color: aqua;
-      }
-      .item-2 {
-        background-color: orange;
-      }
-      .item-3 {
-        background-color: olivedrab;
-      }
-      .item-4 {
-        background-color: royalblue;
-      }
-      .item-5 {
-        background-color: palevioletred;
-      }
-      .item-6 {
-        background-color: goldenrod;
-      }
-
-      /***             CSS Combinators            ***/
-
-      section p {
-        background-color: red;
-      }
-
-      section > p {
-        background-color: green;
-      }
-
-      h1 + p {
-        background-color: yellow;
-      }
-
-      h1 ~ p {
-        background-color: orange;
-      }
-
-      /* CSS Inheritance */
-      body {
-        margin: 5;
-        /* color: blueviolet; */
-      }
-
-      div {
-        color: #000;
-      }
-
-      h1 {
-        color: rgb(151, 125, 8);
-      }
-
-      /***           Text Formatting            ***/
-      #formatting {
-        text-align: right;
-        border: 2px solid rgb(236, 33, 6);
-      }
-
-      h1 {
-        /* font-family: 'Montserrat', sans-serif; */
-        font-style: italic;
-      }
-
-      p {
-        display: inline;
-        background-color: rgb(201, 192, 118, 0.4);
-        color: #8e4991;
-        font-size: 18px;
-        text-align: right;
-        font-family: "Comic Sans MS", cursive;
-        font-weight: bold;
-      }
-      /***              Box model                ***/
-      .box {
-        /* border-width: 5px;
-          border-style: solid;
-          border-color: #8e4991; */
-        border-radius: 8px;
-        border: 5px #8e4991 solid;
-        /* padding-top: 30px;
-          padding-right: 50px;
-          padding-bottom: 70px;
-          padding-left: 90px; */
-        padding: 100px;
-        /* margin-top: 30px;
-          margin-right: 50px;
-          margin-bottom: 70px;
-          margin-left: 100px; */
-        margin: 100px auto;
-        width: 600px;
-        height: 400px;
-        box-sizing: border-box;
-      }
-      /***              Pseudo classes - pseudo elements            ***/
-      a:link {
-        font-size: 32px;
-        text-decoration: none;
-        color: rgba(5, 121, 5, 0.815);
-      }
-      a:visited {
-        color: coral;
-      }
-      a:hover {
-        color: rgb(141, 15, 124);
-      }
-      a:active {
-        color: skyblue;
-      }
-
-      .dropdown {
-        background-color: #3d373d71;
-        text-align: center;
-      }
-      .dropdown-content a {
-        display: none;
-      }
-      .dropdown:hover .dropdown-content a {
-        display: block;
-      }
-
-      ul li:first-child {
-        color: #8e4991;
-      }
-      ul li:last-child {
-        color: red;
-      }
-      ul li:nth-child(3) {
-        color: aqua;
-      }
-
-      h1::first-letter {
-        font-size: 72px;
-        font-style: initial;
-        color: rgba(0, 0, 0, 0.7);
-      }
-      h1::before {
-        content: "This is ";
-        color: bisque;
-      }
-      h1::after {
-        content: " of Website";
-        font-size: 30px;
-        color: rgba(0, 0, 0, 0.7);
-      }
-    </style>
   </head>
   <body>
-    <h1 class="box">Box model</h1>
-    <div class="google">
-      <a href="https://www.google.com">Click me</a>
-    </div>
-    <div class="dropdown">
-      <a href="#">Items</a>
-      <div class="dropdown-content">
-        <a href="#">Item 1</a>
-        <a href="#">Item 2</a>
-        <a href="#">Item 3</a>
-        <a href="#">Item 4</a>
-      </div>
-    </div>
+    <header>
+      <h1>Modern UI Web Development</h1>
+    </header>
 
-    <ul>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
-      <li>item 4</li>
-      <li>item 5</li>
-    </ul>
+    <section include-html="./components/navbar.html"></section>
+    <section include-html="./components/main.html"></section>
+    <section include-html="./components/footer.html"></section>
 
-    <div>
-      <h1>Heading 1</h1>
-      <p>Paragraph</p>
-    </div>
-
-    <div id="formatting">
-      <h1>This is Heading element</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa
-        obcaecati laborum dolores earum. Eveniet alias, optio quod nihil
-        veritatis eius nostrum, obcaecati necessitatibus ipsa, recusandae quam
-        aliquid illo quo.
-      </p>
-    </div>
-
-    <section>
-      <p>Paragraph 1</p>
-      <h1>Heading</h1>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-      <div>
-        <p>Nested Paragraph</p>
-      </div>
-      <p>Paragraph 4</p>
-      <p>Paragraph 5</p>
-    </section>
-
-    <h1 style="background-color: red; color: #fff">Inline Styling</h1>
-    <h3>External Styling</h3>
-
-    <ul>
-      <li id="list-item" class="item_1">HTML5</li>
-      <li>CSS3</li>
-    </ul>
-
-    <input type="text" />
-    <input type="email" />
-
-    <div class="container">
-      <div class="item item-1">item1</div>
-      <div class="item item-2">item2</div>
-      <div class="item item-3">item3</div>
-      <div class="item item-4">item4</div>
-      <div class="item item-5">item5</div>
-      <div class="item item-6">item6</div>
-    </div>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+    <script>
+      includeHTML();
+    </script>
   </body>
 </html>

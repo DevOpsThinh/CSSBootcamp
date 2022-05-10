@@ -1,0 +1,13 @@
+// assets/scss/helpers/_mixins.scss
+@mixin base-font-family-sizing($current-font-family: $base-font-family) 
+{
+    font-family: $current-font-family;
+    line-height: $base-line-height;
+    margin-bottom: $base-font-size * $base-line-height;
+
+    @if $current-font-family == $base-font-family-serif {
+        font-size: $base-font-size * 1.15;
+    } @else {
+        font-size: $base-font-size;
+    }
+}

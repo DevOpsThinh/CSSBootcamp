@@ -1,0 +1,50 @@
+// assets/scss/senior.scss
+
+$base-font-family-sans: sans-serif;
+$base-font-family-serif: serif;
+$base-font-family-code: monospace;
+
+$base-font-size: 1rem;
+$base-font-family: $base-font-family-serif;
+$base-line-height: 1.5;
+
+@import "helpers/mixins";
+
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: serif;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+// We only want to get the "wrapper" div
+body > div {
+    max-width: 38rem; // approximate: 600px, 1 rem = 16px
+    margin: 0 auto;
+}
+
+p {
+    // font-family: sans-serif;
+    // font-size: 1rem;
+    // line-height: 1.5rem;
+    // margin-bottom: 1.5rem;
+    // font-family: $base-font-family-sans;
+    // font-size: $base-font-size;
+    // line-height: $base-line-height;
+    // margin-bottom: $base-line-height + rem;
+    // content: 'Serif';
+    @include base-font-family-sizing();
+  
+}
+
