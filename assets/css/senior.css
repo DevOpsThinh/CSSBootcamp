@@ -1,1 +1,38 @@
-*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html{font-family:serif;font-size:100%;-webkit-font-smoothing:antialiased}html,body{padding:0;margin:0}body>div{max-width:38rem;margin:0 auto}p{font-family:serif;line-height:1.5;margin-bottom:1.5rem;font-size:1.15rem}
+/*
+    assets/scss/helpers/_functions.scss
+
+    Functions out
+
+    Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504
+*/
+/* 
+    assets/scss/helpers/_mixins.scss 
+
+    Figuring Mixins
+
+    Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504
+*/
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+body > div {
+  max-width: 38rem;
+  margin: 0 auto; }
+
+p {
+  font-family: serif;
+  font-size: if true, 1.15rem, 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem; }
