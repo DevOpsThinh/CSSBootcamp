@@ -1,7 +1,7 @@
-# Project exclude paths
-
 # Ignore node_modules folder
 node_modules
+/node_modules
 
 # Ignore package-lock.json
 package-lock.json
+/package-lock.json
