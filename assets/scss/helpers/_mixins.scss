@@ -1,16 +1,11 @@
-/* 
-    assets/scss/helpers/_mixins.scss 
-
-    Figuring Mixins: Abstract repeated style patterns
-
-    Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504
-*/
-
-/// Check our current font-family and adjust all of our valuesaccordingly (keep our line lenghts in check between the main two font families (sans, serif)).
+/// Check our current font-family and adjust all of our values accordingly (keep our line lenghts in check between the main two font families (sans, serif)).
+/// @access public
+///
+/// @group helpers 
 ///
 /// @param {String | list} $current-font-family - The name of a font family in our global font-family.
 ///
-/// @output {Font Size} - A calculated css-ready font size value based on our global font-family and setting the line height.
+/// @output 'font-size'
 @mixin base-font-family-sizing($current-font-family: $base-font-family) {
   font-family: $current-font-family;
   font-size: base-font-sizes-calc();
@@ -24,11 +19,14 @@
   }
 }
 /// Encapsulate font family, font size, and line height to prevent mistakes.
+/// @access public
 ///
-/// @param {Integer} $heading - The specified level of heading in our page layout with given a default value of 2.
+/// @group helpers 
+///
+/// @param {Number} $heading [2] - The specified level of heading in our page layout with given a default value of 2.
 /// @param {String | list} $current-font-family - The name of a font family in our global font-family.
 ///
-/// @output {Font Size, Font Family, Line Height} - A calculated css-ready font size value based on our global font-family and setting the line height.
+/// @output 'font-size', 'font-family' and 'line-height'
 @mixin base-headings-font-family-sizing(
   $heading: 2,
   $current-font-family: $base-headings-font-family
@@ -39,13 +37,14 @@
 }
 /// Place all of our headings into a mixin to creating our configurable base heading styles.
 ///
-/// @output {Heading Styles} - A calculated css-ready heading values.
+/// @output 'heading'
 @mixin base-headings {
   //   @for $i from 1 through 6 {
   //     h#{$i} {
   //       @include base-headings-font-family-sizing($i, nth($base-headings, $i));
   //     }
   //   }
+  @warn "Please use @include cssbeebootcamp-sass-base-headings() instead of @include base-headings(). @mixin base-headings() will be deprecated in version 2.";
   $i: 1;
   @each $heading, $family in $base-headings {
     #{$heading} {

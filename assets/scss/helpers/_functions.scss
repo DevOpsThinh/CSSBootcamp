@@ -1,18 +1,13 @@
-/*
-    assets/scss/helpers/_functions.scss
-
-    Functions out: Abstract a repeated operation
-
-    Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504
-*/
-
 /// Abstract out the base `font-size` into a function that will dynamically generate it based on the $base-font-family.
+/// @access public
+///
+/// @group helpers 
 ///
 /// @param {String | list} $current-font-family - The name of a font family in our page layout.
 ///
 /// @return {Font Size} - A calculated css-ready font size value based on our global font-family.
 @function base-font-sizes-calc($current-font-family: $base-font-family) {
-  // Calculate the $base-font-size based on what the current $base-font-family is
+  // Calculate the $base-font-size based on what the current $base-font-family is.
   // @if $current-font-family == $base-font-family-serif {
   //     // If the famlily is serif we need to increase the font size
   //     @return $base-font-size * 1.15;
@@ -20,16 +15,18 @@
   //     // Otherwise we can leave it at the default
   //     @return $base-font-size
   // }
-  @return if
-    (
-      $current-font-family == $base-font-family-serif,
-      $base-font-size * 1.15,
-      $base-font-size
-    );
+  @if type-of($current-font-family) != string {
+    @error "The base-font-size-calc() function takes a string as it's parameter, #{type-of($current-font-family)} type was given.";
+  } @else {
+    @return if($current-font-family == $base-font-family-serif, $base-font-size * 1.15, $base-font-size);
+  }
 }
 /// Abstract out the base `heading-size` into a function that will dynamically generate it based on our base font sizes calculated.
+/// @access public
 ///
-/// @param {Integer} $heading - The specified level of heading in our page layout with given a default value of 2.
+/// @group helpers 
+///
+/// @param {Number} $heading [2] - The specified level of heading in our page layout with given a default value of 2.
 /// @param {String | list} $font-family - The name of a font family in our page layout.
 ///
 /// @return {The level of Heading} - A calculated css-ready heading size values (h1 into h6).
@@ -37,28 +34,46 @@
   $heading: 2,
   $font-family: $base-headings-font-family
 ) {
-  $h4-font-size: base-font-sizes-calc($font-family);
-  $h1-font-size: $h4-font-size * 2;
+  @if type-of($value: $heading) != number {
+    @error "The first parameter of base-heading-sizes-calc() function must be a number, #{type-of($heading)} was given.";
+  } @else if type-of($value: $font-family) != string {
+    @error "The second parameter of base-heading-sizes-calc() function must be a string, #{type-of($font-family)} was given.";
+  } @else {
+    @if $heading < 1 or $heading > 6 {
+      @warn "Second parameter of base-heading-sizes-calc() function must be between 1 and 6, #{$heading} was given.";
+      @if $heading < 1 {
+        $heading: 1;
+      } @else if $heading > 6 {
+        $heading: 6;
+      }
+    }
 
-  $h2-font-size: $h1-font-size / 1.3333;
-  $h3-font-size: $h2-font-size / 1.2821;
-  $h5-font-size: $h4-font-size / 1.2048;
-  $h6-font-size: $h5-font-size / 1.2388;
+    $h4-font-size: base-font-sizes-calc($font-family);
+    $h1-font-size: $h4-font-size * 2;
 
-  $headings: (
-    $h1-font-size,
-    $h2-font-size,
-    $h3-font-size,
-    $h4-font-size,
-    $h5-font-size,
-    $h6-font-size
-  );
+    $h2-font-size: $h1-font-size / 1.3333;
+    $h3-font-size: $h2-font-size / 1.2821;
+    $h5-font-size: $h4-font-size / 1.2048;
+    $h6-font-size: $h5-font-size / 1.2388;
 
-  @return nth($list: $headings, $n: $heading);
+    $headings: (
+      $h1-font-size,
+      $h2-font-size,
+      $h3-font-size,
+      $h4-font-size,
+      $h5-font-size,
+      $h6-font-size
+    );
+
+    @return nth($list: $headings, $n: $heading);
+  }
 }
 /// Abstract out the base `heading-line-height` into a function that will dynamically generate it based on our base heading sizes calculated.
+/// @access public
 ///
-/// @param {Integer} $heading - The specified level of heading in our page layout with given a default value of 2.
+/// @group helpers 
+///
+/// @param {Number} $heading [2] - The specified level of heading in our page layout with given a default value of 2.
 /// @param {String | list} $font-family - The name of a font family in our page layout.
 ///
 /// @return {The Heading line heights} - A calculated css-ready heading line height values.

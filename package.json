@@ -1,0 +1,32 @@
+{
+  "name": "cssbootcamp",
+  "version": "1.0.0",
+  "description": "The road to better CSS - Sass/ Scss",
+  "main": "gulpfile",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevOpsThinh/CSSBootcamp.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "cascading-style-sheets",
+    "css3",
+    "html-css"
+  ],
+  "author": "Nguyen Truong Thinh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevOpsThinh/CSSBootcamp/issues"
+  },
+  "homepage": "https://github.com/DevOpsThinh/CSSBootcamp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass-convert": "^0.5.2",
+    "sassdoc": "^2.7.4"
+  }
+}

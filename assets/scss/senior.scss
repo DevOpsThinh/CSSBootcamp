@@ -62,3 +62,19 @@ p {
 }
 
 @include base-headings;
+
+// ************* Testing section ************** //
+
+// .test-error {
+//   content: base-font-sizes-calc(1);
+// }
+
+// .test-debug {
+//   // @debug base-font-sizes-calc($base-headings-font-family);
+//   @debug base-font-sizes-calc(2); // @error always win, because it's the highest priority level error message
+// }
+
+// .test-data-types {
+//   // content: base-heading-sizes-calc("", 2)
+//   content: base-heading-sizes-calc(0, $base-headings-font-family);
+// }
