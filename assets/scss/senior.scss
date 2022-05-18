@@ -1,15 +1,50 @@
-// assets/scss/senior.scss
-// Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504
-
-//                  Global variables
+/// Base font family is sans for all text content on the site
+/// @group configuration
+/// @access public
+/// @type String
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-font-family-sans: sans-serif;
+/// Base font family is serif for all text content on the site
+/// @group configuration
+/// @access public
+/// @type String
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-font-family-serif: serif;
+/// Base font family is monospace for all text content on the site
+/// @group configuration
+/// @access public
+/// @type String
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-font-family-code: monospace;
-
+/// Base font size for all text content on the site
+/// @group configuration
+/// @access public
+/// @type Number
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-font-size: 1rem;
+/// Base line height for all text content on the site
+/// @group configuration
+/// @access public
+/// @type Number
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-line-height: 1.5;
+/// Base font family is sans for all text paragraph content on the site
+/// @group configuration
+/// @access public
+/// @type String
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-font-family: $base-font-family-sans;
+/// Base font family is serif for all headings content on the site
+/// @group configuration
+/// @access public
+/// @type String
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-headings-font-family: $base-font-family-serif;
+/// Base headings list for all contents on the site
+/// @group configuration
+/// @access public
+/// @type list
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/senior.scss
 $base-headings: (
   (h1, $base-headings-font-family),
   (h2, $base-font-family),
@@ -63,7 +98,7 @@ p {
 
 @include base-headings;
 
-// ************* Testing section ************** //
+//             Testing section 
 
 // .test-error {
 //   content: base-font-sizes-calc(1);

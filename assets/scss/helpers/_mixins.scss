@@ -1,55 +1,67 @@
 /// Check our current font-family and adjust all of our values accordingly (keep our line lenghts in check between the main two font families (sans, serif)).
-/// @access public
 ///
 /// @group helpers 
 ///
 /// @param {String | list} $current-font-family - The name of a font family in our global font-family.
 ///
+/// @require $base-font-family
 /// @output 'font-size'
-@mixin base-font-family-sizing($current-font-family: $base-font-family) {
-  font-family: $current-font-family;
-  font-size: base-font-sizes-calc();
-  line-height: $base-line-height;
-  margin-bottom: $base-font-size * $base-line-height;
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_mixins.scss
+    @mixin base-font-family-sizing($current-font-family: $base-font-family) {
+      font-family: $current-font-family;
+      font-size: base-font-sizes-calc();
+      line-height: $base-line-height;
+      margin-bottom: $base-font-size * $base-line-height;
 
-  @if $current-font-family == $base-font-family-serif {
-    font-size: $base-font-size * 1.15;
-  } @else {
-    font-size: $base-font-size;
-  }
-}
+      @if $current-font-family == $base-font-family-serif {
+        font-size: $base-font-size * 1.15;
+      } @else {
+        font-size: $base-font-size;
+      }
+    }
 /// Encapsulate font family, font size, and line height to prevent mistakes.
-/// @access public
 ///
 /// @group helpers 
 ///
 /// @param {Number} $heading [2] - The specified level of heading in our page layout with given a default value of 2.
 /// @param {String | list} $current-font-family - The name of a font family in our global font-family.
 ///
+/// @require $base-headings-font-family
+///
 /// @output 'font-size', 'font-family' and 'line-height'
-@mixin base-headings-font-family-sizing(
-  $heading: 2,
-  $current-font-family: $base-headings-font-family
-) {
-  font-family: $current-font-family;
-  font-size: base-heading-sizes-calc($heading, $current-font-family);
-  line-height: base-heading-line-height($heading, $current-font-family);
-}
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_mixins.scss
+    @mixin base-headings-font-family-sizing(
+      $heading: 2,
+      $current-font-family: $base-headings-font-family
+    ) {
+      font-family: $current-font-family;
+      font-size: base-heading-sizes-calc($heading, $current-font-family);
+      line-height: base-heading-line-height($heading, $current-font-family);
+    }
 /// Place all of our headings into a mixin to creating our configurable base heading styles.
+/// 
+/// @require $base-headings
 ///
 /// @output 'heading'
-@mixin base-headings {
-  //   @for $i from 1 through 6 {
-  //     h#{$i} {
-  //       @include base-headings-font-family-sizing($i, nth($base-headings, $i));
-  //     }
-  //   }
-  @warn "Please use @include cssbeebootcamp-sass-base-headings() instead of @include base-headings(). @mixin base-headings() will be deprecated in version 2.";
-  $i: 1;
-  @each $heading, $family in $base-headings {
-    #{$heading} {
-      @include base-headings-font-family-sizing($i, $family);
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_mixins.scss
+    @mixin base-headings {
+      //   @for $i from 1 through 6 {
+      //     h#{$i} {
+      //       @include base-headings-font-family-sizing($i, nth($base-headings, $i));
+      //     }
+      //   }
+      @warn "Please use @include cssbeebootcamp-sass-base-headings() instead of @include base-headings(). @mixin base-headings() will be deprecated in version 2.";
+      $i: 1;
+      @each $heading, $family in $base-headings {
+        #{$heading} {
+          @include base-headings-font-family-sizing($i, $family);
+        }
+        $i: $i + 1;
+      }
     }
-    $i: $i + 1;
-  }
-}

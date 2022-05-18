@@ -1,11 +1,14 @@
 /// Abstract out the base `font-size` into a function that will dynamically generate it based on the $base-font-family.
-/// @access public
+
 ///
 /// @group helpers 
 ///
 /// @param {String | list} $current-font-family - The name of a font family in our page layout.
 ///
 /// @return {Font Size} - A calculated css-ready font size value based on our global font-family.
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_functions.scss
 @function base-font-sizes-calc($current-font-family: $base-font-family) {
   // Calculate the $base-font-size based on what the current $base-font-family is.
   // @if $current-font-family == $base-font-family-serif {
@@ -30,6 +33,9 @@
 /// @param {String | list} $font-family - The name of a font family in our page layout.
 ///
 /// @return {The level of Heading} - A calculated css-ready heading size values (h1 into h6).
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_functions.scss
 @function base-heading-sizes-calc(
   $heading: 2,
   $font-family: $base-headings-font-family
@@ -77,6 +83,9 @@
 /// @param {String | list} $font-family - The name of a font family in our page layout.
 ///
 /// @return {The Heading line heights} - A calculated css-ready heading line height values.
+///
+/// @author `Nguyen Truong Thinh`
+/// @link https://github.com/DevOpsThinh/CSSBootcamp/blob/master/assets/scss/helpers/_functions.scss
 @function base-heading-line-height(
   $heading: 2,
   $font-family: $base-headings-font-family

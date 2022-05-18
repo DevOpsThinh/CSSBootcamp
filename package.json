@@ -4,7 +4,7 @@
   "description": "The road to better CSS - Sass/ Scss",
   "main": "gulpfile",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp sdocs"
   },
   "repository": {
     "type": "git",
