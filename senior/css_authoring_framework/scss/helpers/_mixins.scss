@@ -1,0 +1,3 @@
+@mixin text-shadow-xy($x-and-y) {
+    text-shadow: $x-and-y 0 $red;
+}

@@ -1,4 +1,4 @@
-<!-- HTML - CSS - SASS - JS Revision
+<!-- HTML - CSS - SASS|SCSS - JS Revision
 Senior level section
 
 Author: Nguyen Truong Thinh
@@ -9,17 +9,16 @@ Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504 -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senior Level: Lesson 1</title>
-    <link rel="stylesheet" href="../assets/css/senior.css" />
+    <title>Senior Level: Lesson 2</title>
+    <link rel="stylesheet" href="assets/css/screen.css" />
   </head>
   <body>
-    <nav>
-      <ul >
-        <li>
-          <a href="./css_authoring_framework/index.html">Lesson 2 </a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <h1>Lesson 2: Compass (CSS Authoring Framework)</h1>
+    </header>
+
+    <section include-html="./components/navbar.html"></section>
+
     <div>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
@@ -35,7 +34,8 @@ Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504 -->
         <img
           src="https://avatars.githubusercontent.com/u/56128362?v=4"
           alt="A military medical soldier"
-          style="float: left; width: 200px; height: 200px"
+          style="width: 200px; height: 300px"
+          class="vertical-rhythm"
         />Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque
         accusantium dicta eos nemo repellat perferendis. Culpa blanditiis
         sapiente perspiciatis? Labore tempora, delectus voluptatum cum tempore
@@ -45,7 +45,8 @@ Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504 -->
         <img
           src="https://avatars.githubusercontent.com/u/56128362?v=4"
           alt="A military medical soldier"
-          style="float: right; width: 650px; height: 600px"
+          style="width: 600px; height: 600px"
+          class="vertical-rhythm"
         />Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
         accusantium, temporibus minus cupiditate assumenda iusto provident
         repellat error officiis quas inventore optio, atque ut consequatur
@@ -57,5 +58,11 @@ Contact me: nguyentruongthinhvn2020@gmail.com || +84393280504 -->
         <li>List Item 3</li>
       </ul>
     </div>
+    <section include-html="../../components/footer.html"></section>
+
+    <script type="text/javascript" src="../../assets/js/script.js"></script>
+    <script>
+      includeHTML();
+    </script>
   </body>
 </html>

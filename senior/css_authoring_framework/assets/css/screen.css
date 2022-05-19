@@ -1,0 +1,245 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 106, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* line 31, ../../scss/screen.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.07813em;
+}
+
+/* line 31, ../../scss/screen.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1.0625em;
+}
+
+/* line 31, ../../scss/screen.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 1.12179em;
+}
+
+/* line 31, ../../scss/screen.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.125em;
+}
+
+/* line 31, ../../scss/screen.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.12952em;
+}
+
+/* line 31, ../../scss/screen.scss */
+h6 {
+  font-size: 0.67em;
+  line-height: 1.25933em;
+}
+
+@-moz-keyframes animate-text-shadow {
+  15% {
+    text-shadow: -10px -5px 0 #ac2f31;
+  }
+  50% {
+    text-shadow: -5px 5px 0 #ac2f31;
+  }
+  85% {
+    text-shadow: 10px -5px 0 #ac2f31;
+  }
+}
+@-webkit-keyframes animate-text-shadow {
+  15% {
+    text-shadow: -10px -5px 0 #ac2f31;
+  }
+  50% {
+    text-shadow: -5px 5px 0 #ac2f31;
+  }
+  85% {
+    text-shadow: 10px -5px 0 #ac2f31;
+  }
+}
+@keyframes animate-text-shadow {
+  15% {
+    text-shadow: -10px -5px 0 #ac2f31;
+  }
+  50% {
+    text-shadow: -5px 5px 0 #ac2f31;
+  }
+  85% {
+    text-shadow: 10px -5px 0 #ac2f31;
+  }
+}
+/* line 53, ../../scss/screen.scss */
+body {
+  background-color: #c9c6c6;
+}
+
+/* line 56, ../../scss/screen.scss */
+body > div {
+  max-width: 38rem;
+}
+
+/* line 59, ../../scss/screen.scss */
+h1 {
+  font-family: sans-serif;
+  color: #c9c6c6;
+  text-align: center;
+  margin: 15px auto;
+  text-shadow: 5px 2px 0 #ac2f31;
+  -moz-animation: animate-text-shadow 5s;
+  -webkit-animation: animate-text-shadow 5s;
+  animation: animate-text-shadow 5s;
+}
+
+/* line 68, ../../scss/screen.scss */
+p {
+  margin-bottom: 1.5;
+  margin-top: 1.5;
+}
+
+/* line 72, ../../scss/screen.scss */
+.vertical-rhythm {
+  width: auto;
+  display: block;
+}
+
+/* line 76, ../../scss/screen.scss */
+.vertical-rhythm[height="300"][width="200"] {
+  height: 12;
+}
+
+/* line 79, ../../scss/screen.scss */
+.vertical-rhythm[height="600"][width="600"] {
+  height: 9;
+}
+@media (min-width: 420px) {
+  /* line 79, ../../scss/screen.scss */
+  .vertical-rhythm[height="600"][width="600"] {
+    height: 12;
+  }
+}
+@media (min-width: 520px) {
+  /* line 79, ../../scss/screen.scss */
+  .vertical-rhythm[height="600"][width="600"] {
+    height: 15;
+  }
+}
+@media (min-width: 620px) {
+  /* line 79, ../../scss/screen.scss */
+  .vertical-rhythm[height="600"][width="600"] {
+    height: 18;
+  }
+}
+@media (min-width: 720px) {
+  /* line 79, ../../scss/screen.scss */
+  .vertical-rhythm[height="600"][width="600"] {
+    height: 21;
+  }
+}
+
+/* line 98, ../../scss/screen.scss */
+.newspager-article {
+  text-align: justify;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-width: 15em;
+  -webkit-column-width: 15em;
+  column-width: 15em;
+  -moz-column-gap: 2em;
+  -webkit-column-gap: 2em;
+  column-gap: 2em;
+  -moz-column-rule: 1px solid #009f0d;
+  -webkit-column-rule: 1px solid #009f0d;
+  column-rule: 1px solid #009f0d;
+}
+
+/* line 105, ../../scss/screen.scss */
+.transform-me {
+  border: 2px solid goldenrod;
+  width: 10em;
+  line-height: 10em;
+  text-align: center;
+  margin: 10px auto;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform: translate(100px, 100px) rotate(45deg);
+  -ms-transform: translate(100px, 100px) rotate(45deg);
+  -webkit-transform: translate(100px, 100px) rotate(45deg);
+  transform: translate(100px, 100px) rotate(45deg);
+}

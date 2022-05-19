@@ -1,0 +1,116 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// -------- Variables (configuration)
+
+$base-font-size: 16px; $base-line-height: 1.5;
+$base-heading-sizes: (2, 1.5, 1.17, 1, 0.83, 0.67);
+$grey: #c9c6c6;
+$red: #ac2f31;
+
+// -------- Required libraries - frameworks (dependencies)
+
+@import "compass/reset"; // reset.css method (reset stylesheet)
+@import "compass/typography"; // Compass typography helpers
+@import "compass/css3/columns"; // Compass css3 mixin for css columns
+@import "compass/css3/transform"; // Compass css3 mixin for css 3D transforms
+@import "compass/css3/animation"; // Compass css3 mixin for css animation
+
+// -------- Partials (our Scss files)
+
+@import "helpers/mixins";
+
+
+
+/// Establish Baseline.
+@include establish-baseline;
+/// Establish Size our Headings, uses adjust-font-size-to mixin.
+@for $i from 1 through 6 {
+    h#{$i} {
+        @include adjust-font-size-to($base-font-size * nth($base-heading-sizes, $i));
+    }
+}
+
+@include keyframes(animate-text-shadow) {
+    15% {
+        @include text-shadow-xy(-10px -5px);
+    }
+    50% {
+        @include text-shadow-xy(-5px 5px);
+    };
+    85% {
+        @include text-shadow-xy(10px -5px);
+    }
+}
+
+// --------  CUSTOM STYLES - HTML RULES
+
+// html {
+//     @include baseline-grid-background;
+// }
+body {
+    background-color: $grey;
+}
+body > div { // Get the "Wrapper" div
+    max-width: 38rem; // approximate: 600px, 1 rem = 16px 
+}
+h1 {
+    font-family: sans-serif;
+    color: $grey;
+    text-align: center;
+    margin: 15px auto;
+    // text-shadow: 5px 2px 0px $red;
+    @include text-shadow-xy(5px 2px);
+    @include animation(animate-text-shadow 5s);
+}
+p { // Add margin or padding to top or bottom of paragraph uses trailer mixin
+    @include trailer(1);
+    @include leader(1);
+}
+.vertical-rhythm { // vertical rhythm for images
+    width: auto;
+    display: block;
+}
+.vertical-rhythm[height="300"][width="200"] {
+    height: rhythm(8);
+}
+.vertical-rhythm[height="600"][width="600"] {
+    height: rhythm(6);
+
+    @media (min-width: 420px) {
+        height: rhythm(8);
+    }
+
+    @media (min-width: 520px) {
+        height: rhythm(10);
+    }
+
+     @media (min-width: 620px) {
+        height: rhythm(12);
+    }
+
+     @media (min-width: 720px) {
+        height: rhythm(14);
+    }
+}
+.newspager-article {
+    text-align: justify;
+    @include column-count(3);
+    @include column-width(15em);
+    @include column-gap(2em);
+    @include column-rule(1px solid darken(rgb(6, 255, 27), 20%));
+}
+.transform-me {
+    border: 2px solid goldenrod;
+    width: 10em;
+    line-height: 10em;
+    text-align: center;
+    margin: 10px auto ;
+    @include rotate;
+    // @include transform-origin(top, left);
+    // @include translate(10px);
+    // @include transform(rotate(45deg) translate(100px, 100px));
+    @include transform(translate(100px, 100px) rotate(45deg));
+}
