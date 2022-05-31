@@ -67,43 +67,60 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 38, ../../scss/screen.scss */
+body, .main-menu-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 45, ../../scss/screen.scss */
+.main-menu-list-item.active {
+  background-color: #1c272f;
+}
+
+/* line 55, ../../scss/screen.scss */
+.main-menu-list-item.active .main-menu-list-item-link {
+  color: #fb292d;
+}
+
 /* line 106, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h1 {
   font-size: 2em;
   line-height: 1.07813em;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h2 {
   font-size: 1.5em;
   line-height: 1.0625em;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h3 {
   font-size: 1.17em;
   line-height: 1.12179em;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h4 {
   font-size: 1em;
   line-height: 1.125em;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h5 {
   font-size: 0.83em;
   line-height: 1.12952em;
 }
 
-/* line 31, ../../scss/screen.scss */
+/* line 65, ../../scss/screen.scss */
 h6 {
   font-size: 0.67em;
   line-height: 1.25933em;
@@ -142,17 +159,162 @@ h6 {
     text-shadow: 10px -5px 0 #ac2f31;
   }
 }
-/* line 53, ../../scss/screen.scss */
+/* line 87, ../../scss/screen.scss */
 body {
+  font-family: sans-serif;
   background-color: #c9c6c6;
 }
 
-/* line 56, ../../scss/screen.scss */
+/* line 94, ../../scss/screen.scss */
 body > div {
   max-width: 38rem;
 }
 
-/* line 59, ../../scss/screen.scss */
+/* line 98, ../../scss/screen.scss */
+.main-header {
+  background-color: #26343f;
+}
+@media (min-width: 768px) {
+  /* line 98, ../../scss/screen.scss */
+  .main-header {
+    overflow: hidden;
+    *zoom: 1;
+  }
+}
+
+/* line 106, ../../scss/screen.scss */
+.branding {
+  padding: 0 1em;
+  font-size: 1.5em;
+  line-height: 3;
+  text-transform: uppercase;
+  color: white;
+}
+@media (min-width: 768px) {
+  /* line 106, ../../scss/screen.scss */
+  .branding {
+    float: left;
+  }
+}
+
+/* line 118, ../../scss/screen.scss */
+.main-menu-list {
+  list-style: none;
+}
+/* line 11, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_bullets.scss */
+.main-menu-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  /* line 118, ../../scss/screen.scss */
+  .main-menu-list {
+    float: right;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 62, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  .main-menu-list li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    float: left;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  /* line 49, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  .main-menu-list li:first-child {
+    padding-left: 0;
+  }
+  /* line 50, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  .main-menu-list li:last-child {
+    padding-right: 0;
+  }
+  /* line 52, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  .main-menu-list li.last {
+    padding-right: 0;
+  }
+  /* line 129, ../../scss/screen.scss */
+  .main-menu-list:first-child {
+    padding-left: 1em;
+  }
+  /* line 132, ../../scss/screen.scss */
+  .main-menu-list:last-child {
+    padding-right: 1em;
+  }
+}
+
+/* line 139, ../../scss/screen.scss */
+.main-menu-list-item {
+  line-height: 2.75;
+  padding: 0 1em;
+}
+
+/* line 152, ../../scss/screen.scss */
+.main-menu-list-item-link {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 4, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
+.main-menu-list-item-link:hover, .main-menu-list-item-link:focus {
+  text-decoration: underline;
+}
+
+/* line 157, ../../scss/screen.scss */
+.tag-cloud-component {
+  max-width: 20em;
+  list-style: none;
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 19.2px;
+}
+/* line 11, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_bullets.scss */
+.tag-cloud-component li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 6, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_inline-list.scss */
+.tag-cloud-component, .tag-cloud-component li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+/* line 5, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .xxs, .tag-cloud-component .xs, .tag-cloud-component .s, .tag-cloud-component .l, .tag-cloud-component .xl, .tag-cloud-component .xxl {
+  line-height: 19.2px;
+}
+/* line 7, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .xxs {
+  font-size: 8px;
+}
+/* line 9, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .xs {
+  font-size: 10.66667px;
+}
+/* line 11, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .s {
+  font-size: 12px;
+}
+/* line 13, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .l {
+  font-size: 21.33333px;
+}
+/* line 15, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .xl {
+  font-size: 24px;
+}
+/* line 17, C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.tag-cloud-component .xxl {
+  font-size: 32px;
+}
+
+/* line 164, ../../scss/screen.scss */
 h1 {
   font-family: sans-serif;
   color: #c9c6c6;
@@ -164,53 +326,53 @@ h1 {
   animation: animate-text-shadow 5s;
 }
 
-/* line 68, ../../scss/screen.scss */
+/* line 173, ../../scss/screen.scss */
 p {
   margin-bottom: 1.5;
   margin-top: 1.5;
 }
 
-/* line 72, ../../scss/screen.scss */
+/* line 177, ../../scss/screen.scss */
 .vertical-rhythm {
   width: auto;
   display: block;
 }
 
-/* line 76, ../../scss/screen.scss */
+/* line 181, ../../scss/screen.scss */
 .vertical-rhythm[height="300"][width="200"] {
   height: 12;
 }
 
-/* line 79, ../../scss/screen.scss */
+/* line 184, ../../scss/screen.scss */
 .vertical-rhythm[height="600"][width="600"] {
   height: 9;
 }
 @media (min-width: 420px) {
-  /* line 79, ../../scss/screen.scss */
+  /* line 184, ../../scss/screen.scss */
   .vertical-rhythm[height="600"][width="600"] {
     height: 12;
   }
 }
 @media (min-width: 520px) {
-  /* line 79, ../../scss/screen.scss */
+  /* line 184, ../../scss/screen.scss */
   .vertical-rhythm[height="600"][width="600"] {
     height: 15;
   }
 }
 @media (min-width: 620px) {
-  /* line 79, ../../scss/screen.scss */
+  /* line 184, ../../scss/screen.scss */
   .vertical-rhythm[height="600"][width="600"] {
     height: 18;
   }
 }
 @media (min-width: 720px) {
-  /* line 79, ../../scss/screen.scss */
+  /* line 184, ../../scss/screen.scss */
   .vertical-rhythm[height="600"][width="600"] {
     height: 21;
   }
 }
 
-/* line 98, ../../scss/screen.scss */
+/* line 203, ../../scss/screen.scss */
 .newspager-article {
   text-align: justify;
   -moz-column-count: 3;
@@ -227,7 +389,7 @@ p {
   column-rule: 1px solid #009f0d;
 }
 
-/* line 105, ../../scss/screen.scss */
+/* line 210, ../../scss/screen.scss */
 .transform-me {
   border: 2px solid goldenrod;
   width: 10em;

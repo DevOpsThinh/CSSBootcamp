@@ -7,13 +7,25 @@
 
 $base-font-size: 16px; $base-line-height: 1.5;
 $base-heading-sizes: (2, 1.5, 1.17, 1, 0.83, 0.67);
+
 $grey: #c9c6c6;
 $red: #ac2f31;
+
+$bg-color: #26343f;
+$bg-color-darker: darken($bg-color, 5%);
+
+$link-color: darken(white, 20%);
+$link-color-hover: #2a9181;
+$link-color-active: #fb292d;
+
 
 // -------- Required libraries - frameworks (dependencies)
 
 @import "compass/reset"; // reset.css method (reset stylesheet)
 @import "compass/typography"; // Compass typography helpers
+//@import "compass/typography/lists/bullets"; // Compass lists typography mixins
+//@import "compass/typography/lists/horizontal-list"; // Compass lists typography mixins
+@import "compass/utilities/general/tag-cloud"; // Compass Tag Cloud
 @import "compass/css3/columns"; // Compass css3 mixin for css columns
 @import "compass/css3/transform"; // Compass css3 mixin for css 3D transforms
 @import "compass/css3/animation"; // Compass css3 mixin for css animation
@@ -21,6 +33,28 @@ $red: #ac2f31;
 // -------- Partials (our Scss files)
 
 @import "helpers/mixins";
+
+// -------- Placeholder extends rule
+%reset-box-model {
+    @include reset-box-model;
+}
+
+%bg-color {
+    background-color: $bg-color;
+}
+%bg-color-darker {
+    background-color: $bg-color-darker
+}
+
+%link-color {
+    color: $link-color;
+}
+%link-color-hover {
+    color: $link-color-hover
+}
+%link-color-active {
+    color: $link-color-active
+}
 
 
 
@@ -51,11 +85,82 @@ $red: #ac2f31;
 //     @include baseline-grid-background;
 // }
 body {
+    // padding: 0;
+    // margin: 0;
+    @extend %reset-box-model;
+    font-family: sans-serif;
     background-color: $grey;
 }
 body > div { // Get the "Wrapper" div
     max-width: 38rem; // approximate: 600px, 1 rem = 16px 
 }
+
+.main-header {
+    background-color: $bg-color;
+
+    @media (min-width: 768px) {
+        @include clearfix;
+    }
+}
+
+.branding {
+    padding: 0 1em;
+    font-size: 1.5em;
+    line-height: 3;
+    text-transform: uppercase;
+    color: white;
+
+    @media (min-width: 768px) {
+        @include float-left;
+    }
+}
+
+.main-menu-list {
+    // padding: 0;
+    // margin: 0;
+    @extend %reset-box-model;
+
+    @include no-bullets;
+
+    @media (min-width: 768px) {
+        @include float-right;
+        @include horizontal-list(1em);
+
+        &:first-child {
+            padding-left: 1em;
+        }
+        &:last-child {
+            padding-right: 1em;
+        }
+    }
+
+}
+
+.main-menu-list-item {
+    line-height: 2.75;
+    padding: 0 1em;
+
+    &.active {
+        @extend %bg-color-darker;
+
+        .main-menu-list-item-link {
+            @extend %link-color-active
+        }
+    }
+}
+
+.main-menu-list-item-link {
+    color: $link-color;
+    @include hover-link;
+}
+
+.tag-cloud-component {
+    max-width: 20em;
+    @include no-bullets;
+    @include inline-list;
+    @include tag-cloud($base-font-size);
+}
+
 h1 {
     font-family: sans-serif;
     color: $grey;
