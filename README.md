@@ -6,6 +6,7 @@
 - "compass watch" for watching & compile our scss code project.<br><br>
 <img src="img/default_theme.png" height="480" /><br>
 <img src="img/viewsource.png" height="480" /> <br>
+<img src="img/frontend.gif" height="480" /> <br>
 
 ### Used Software Info:
 - Visual Studio Code v1.67.1

@@ -1,0 +1,28 @@
+// Scalable Modular Architecture for CSS (SMACSS): Layout topic
+.product {
+    margin: 5em;
+    padding: 1em;
+    overflow: hidden;
+    &-image {
+        float: left;
+        margin: 0 0.5em 0 0;
+    }
+
+    &-title {
+        margin-top: 0;
+        &-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &-sale {
+        margin-left: 1em;
+        opacity: 0.5;
+    }
+
+    &-button {
+        padding: 0.25em 0.5em;
+        float: right;
+    }
+}

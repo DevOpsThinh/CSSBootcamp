@@ -33,6 +33,8 @@ $link-color-active: #fb292d;
 // -------- Partials (our Scss files)
 
 @import "helpers/mixins";
+@import "layout";
+@import "theme";
 
 // -------- Placeholder extends rule
 %reset-box-model {

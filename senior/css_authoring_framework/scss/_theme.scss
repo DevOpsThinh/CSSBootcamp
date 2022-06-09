@@ -1,0 +1,37 @@
+// Scalable Modular Architecture for CSS (SMACSS): Theme topic
+%theme-text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+%theme-color-crimson {
+    color: crimson;
+}
+
+.product {
+    box-shadow: 0px 0px 5px;
+    font-family: Verdana, Arial, sans-serif;
+    &-title {
+        @extend %theme-text-transform-uppercase;
+        a {
+            @include hover-link;
+            @extend %theme-color-crimson;
+        }
+    }
+    &-total {
+        font-weight: bold;
+    }
+    &-button {
+        @extend %theme-text-transform-uppercase;
+        
+        text-decoration: none;
+        color: white;
+        background-color: crimson;
+        border: 1px solid transparent;
+        &:hover {
+            @extend %theme-color-crimson;
+
+            background: transparent;
+            border: 1px solid crimson;
+        }
+    }
+}
