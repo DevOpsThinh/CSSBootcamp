@@ -1,3 +1,4 @@
+<strong><em>"Thanks for your reading, please give me a STAR!"<em><strong>
 ####  "Start writing some Syntactically Awesome Style Sheets (Sass). Clean, beautiful code, make other devs be able to read what is there & understand it!"<br>
 
 ### Commands
